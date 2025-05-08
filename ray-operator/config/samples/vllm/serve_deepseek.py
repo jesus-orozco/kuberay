@@ -19,7 +19,7 @@ llm_config = LLMConfig(
     # Customize engine arguments as needed (e.g. vLLM engine kwargs)
     engine_kwargs={
         "tensor_parallel_size": os.environ['TENSOR_PARALLELISM'],
-        "pipeline_parallel_size": os.environ['PIPELINE_PARALLELISM'],
+        "pipeline_parallel_size": 2,
         "gpu_memory_utilization": 0.92,
         "dtype": "auto",
         "max_num_seqs": 40,
