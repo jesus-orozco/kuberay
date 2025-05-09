@@ -118,7 +118,7 @@ def build_app(cli_args: Dict[str, str]) -> serve.Application:
     Supported engine arguments: https://docs.vllm.ai/en/latest/models/engine_args.html.
     """  # noqa: E501
     if "deepseek" in cli_args["model"]:
-        cli_args.update("trust-remote-code": True)
+        cli_args.update({"trust-remote-code": True})
     parsed_args = parse_vllm_args(cli_args)
     engine_args = AsyncEngineArgs.from_cli_args(parsed_args)
     engine_args.worker_use_ray = True
