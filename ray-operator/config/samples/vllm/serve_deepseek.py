@@ -5,7 +5,7 @@ from ray.serve.llm import LLMConfig, build_openai_app
 llm_config = LLMConfig(
     model_loading_config={
         "model_id": "deepseek",
-        "model_source": "deepseek-ai/DeepSeek-R1",
+        "model_source": "deepseek-ai/DeepSeek-V2",
     },
     deployment_config={
         "autoscaling_config": {
